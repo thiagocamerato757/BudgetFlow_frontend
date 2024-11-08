@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0E0E0E;
+    color: #36FF6E; /* Verde neon para o texto geral */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #FFFFFF;
+}
+nav {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff; 
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #36FF6E; /* Verde neon mais claro ao passar o mouse */
+}
+
+h1 {
+    color: #ffffff; /* Verde neon para o título */
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o título */
+    margin-top: 50px;
+}
+
+mark{
+    color: #36FF6E;
+    background-color: transparent;
+}
+
+button{
+    background-color: #36FF6E;
+    border-radius: 7px;
+    width: 200px;
+    height: 80px;
+    border: none;
+    font-size: larger;
+    margin-top: 20px;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color:  #00a12e;
+    color:  #0E0E0E;
+    
+}
+
+.ghost{
+    margin-top: 10%;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1F1F1F;
+    color: #36FF6E; /* Verde neon para o rodapé */
+    margin-top: 30px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
