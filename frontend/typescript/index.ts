@@ -96,20 +96,20 @@ function removeLogoutButton(): void {
 
 // Função para deslogar o usuário
 async function logoutUser(): Promise<void> {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("authToken");
     if (!token) return;
 
     try {
         const response = await fetch(LOGOUT_URL, {
             method: "DELETE",
             headers: {
-                Authorization: `Token ${token}`,
+                Authorization: `token ${token}`,
             },
         });
 
         if (response.ok) {
             alert("Usuário deslogado com sucesso.");
-            localStorage.removeItem("token");
+            localStorage.removeItem("authToken");
             window.location.reload(); // Recarrega a página
         } else {
             const errorData = await response.json();
