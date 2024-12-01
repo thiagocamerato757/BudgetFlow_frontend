@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/add.css">
-    <title>Editar Receita</title>
+    <title>Editar Despesa</title>
 </head>
 <body>
     <header>
         <img src="../img/Budget_Flow.png" alt="Logo da pagina"> 
         <div>
             <nav>
-                <a href="homepage.html">Tela Inicial</a>
+                <a href="index.html">Tela Inicial</a>
                 <a href="listar_despesas.html">Visualizar Despesa</a>
                 <a href="listar_receitas.html">Visualizar Receita</a>
                 <a href="#">Sair</a>
@@ -20,9 +20,9 @@
     </header>
     
     <div class="container">
-        <h1>Editar Receita</h1>
-        <form method="POST" action="/editar_receita">
-            <div class="form-group">
+        <h1>Editar Despesa</h1>
+        <form method="POST" action="/editar_despesa"></form>
+            <div class="form-group"></div>
                 <label for="descricao">Descrição:</label>
                 <input type="text" id="descricao" name="descricao">
             </div>
@@ -40,7 +40,7 @@
             </div>
             <button type="submit">Salvar</button>
         </form>
-        <a href="/listar_receitas"><button>Voltar à lista de Receitas</button></a>
+        <a href="/listar_despesas"><button>Voltar à lista de despesas</button></a>
     </div>
 </body>
 </html>

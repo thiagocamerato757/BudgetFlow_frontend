@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/add.css">
-    <title>Editar Despesa</title>
+    <title>Registrar Despesa</title>
 </head>
 <body>
     <header>
-        <img src="../img/Budget_Flow.png" alt="Logo da pagina"> 
+        <img src="../img/Budget_Flow.png" alt="Logo da Site"> 
         <div>
             <nav>
-                <a href="homepage.html">Tela Inicial</a>
+                <a href="index.html">Tela Inicial</a>
                 <a href="listar_despesas.html">Visualizar Despesa</a>
                 <a href="listar_receitas.html">Visualizar Receita</a>
                 <a href="#">Sair</a>
             </nav>
         </div>
     </header>
-    
-    <div class="container">
-        <h1>Editar Despesa</h1>
-        <form method="POST" action="/editar_despesa"></form>
-            <div class="form-group"></div>
+    <div class='container'>
+        <h1>Registrar Despesa</h1>
+        <form method="POST" action="/add_despesa">
+            <div class="form-group">
                 <label for="descricao">Descrição:</label>
                 <input type="text" id="descricao" name="descricao">
             </div>
@@ -38,9 +37,8 @@
                 <label for="categoria">Categoria:</label>
                 <input type="text" id="categoria" name="categoria">
             </div>
-            <button type="submit">Salvar</button>
+            <button type="submit">Adicionar Despesa</button>
         </form>
-        <a href="/listar_despesas"><button>Voltar à lista de despesas</button></a>
     </div>
 </body>
 </html>
