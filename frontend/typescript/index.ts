@@ -1,7 +1,7 @@
 import { IS_LOGGED_IN_URL, LOGOUT_URL } from "./constantes";
 // Selecionar o elemento do menu de navegação no DOM
 const navElement = document.querySelector("header nav");
-
+const msgBoasVindas = document.getElementById("mensagem") as HTMLElement;
 
 function hideLoginAndSignupLinks(): void {
     const loginLink = document.querySelector('nav a[href="login.html"]');
@@ -33,6 +33,7 @@ async function checkAuthentication(): Promise<void> {
 
     if (!token) {
         console.log("Token não encontrado. Usuário não autenticado.");
+        genericmessage();
         removeLogoutButton();
         return;
     }
@@ -50,6 +51,7 @@ async function checkAuthentication(): Promise<void> {
             if (data.is_authenticated) {
                 console.log("Usuário autenticado:", data.user_id);
                 updateNavbarForAuthenticatedUser();
+                updatename(data.username);
             } else {
                 console.log("Usuário não autenticado.");
                 removeLogoutButton();
@@ -57,10 +59,12 @@ async function checkAuthentication(): Promise<void> {
         } else {
             console.log("Falha ao verificar autenticação.");
             removeLogoutButton();
+            genericmessage();
         }
     } catch (error) {
         console.error("Erro ao verificar autenticação:", error);
         removeLogoutButton();
+        genericmessage(); 
     }
 }
 
@@ -120,6 +124,13 @@ async function logoutUser(): Promise<void> {
     }
 }
 
+function updatename(name : string): void {
+    msgBoasVindas.textContent = `Bem-vindo ao Budget Flow ${name}!`;
+}
+
+function genericmessage(): void {
+    msgBoasVindas.textContent = "Bem Vindo ao Budget Flow, Visitante!";
+}
 // Executar a verificação ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {
     checkAuthentication();
