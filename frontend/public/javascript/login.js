@@ -40,30 +40,9 @@ loginForm.addEventListener("submit", async (event) => {
             window.location.href = "/index.html"; // Redireciona para a página principal
         }
         else {
-            // Tratamento de erros de validação
-            if (data.username) {
-                usernameErrors.textContent = Array.isArray(data.username)
-                    ? data.username.join(", ")
-                    : data.username;
-            }
-            else {
-                usernameErrors.classList.remove("visible");
-            }
-            if (data.password) {
-                passwordErrors.textContent = Array.isArray(data.password)
-                    ? data.password.join(", ")
-                    : data.password;
-                passwordErrors.classList.add("visible");
-            }
-            else {
-                passwordErrors.classList.remove("visible");
-            }
-            if (data.non_field_errors) {
-                nonFieldErrors.textContent = data.non_field_errors.join(", ");
-                nonFieldErrors.classList.add("visible");
-            }
-            else {
-                nonFieldErrors.classList.remove("visible");
+            if (!data.username || !data.password) {
+                console.log("data: ", data);
+                alert("Usuário ou senha inválidos.");
             }
         }
     }
