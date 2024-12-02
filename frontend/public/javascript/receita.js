@@ -1,4 +1,4 @@
-import { RECEITA_URL } from "./constantes.js";
+import { RECEITA_URL, EDITARECEITA_URL } from "./constantes";
 // Função para buscar receitas da API
 async function fetchReceitas() {
     // Obtém o token do localStorage
@@ -47,7 +47,7 @@ function displayReceitas(receitas) {
         const editarButton = document.createElement("button");
         editarButton.textContent = "Editar";
         editarButton.onclick = () => {
-            window.location.href = `/editar_receita/${receita.id}`;
+            window.location.href = `${EDITARECEITA_URL}${receita.id}/`;
         };
         acoesCell.appendChild(editarButton);
         const removerButton = document.createElement("button");
