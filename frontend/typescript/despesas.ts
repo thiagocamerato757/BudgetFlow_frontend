@@ -58,7 +58,7 @@ function displayDespesas(despesas: any[]) {
         const editarButton = document.createElement("button");
         editarButton.textContent = "Editar";
         editarButton.onclick = () => {
-            window.location.href = `/editar_despesa/${despesa.id}`;
+            window.location.href = `editar_despesas.html?id=${despesa.id}`;
         };
         acoesCell.appendChild(editarButton);
 

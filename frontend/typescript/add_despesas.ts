@@ -5,7 +5,7 @@ const form = document.getElementById("adicionar_despesas") as HTMLFormElement;
 const descricaoInput = document.getElementById("descricao") as HTMLInputElement;
 const valorInput = document.getElementById("valor") as HTMLInputElement;
 const dataInput = document.getElementById("data") as HTMLInputElement;
-const categoriaInput = document.getElementById("categoria") as HTMLInputElement;
+const categoriaSelect = document.getElementById("categoria") as HTMLSelectElement;
 const errorMessage = document.querySelector(".error-message") as HTMLElement;
 const listaErros = document.querySelector(".lista_erros") as HTMLElement;
 
@@ -22,7 +22,7 @@ form.addEventListener("submit", async (event) => {
         descricao: descricaoInput.value,
         valor: parseFloat(valorInput.value),
         data: dataInput.value,
-        categoria: categoriaInput.value,
+        categoria: categoriaSelect.value,
     };
     console.log("Dados da despesa:", despesaData);
 

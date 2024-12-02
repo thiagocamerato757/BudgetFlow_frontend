@@ -4,7 +4,7 @@ const form = document.getElementById("adicionar_despesas");
 const descricaoInput = document.getElementById("descricao");
 const valorInput = document.getElementById("valor");
 const dataInput = document.getElementById("data");
-const categoriaInput = document.getElementById("categoria");
+const categoriaSelect = document.getElementById("categoria");
 const errorMessage = document.querySelector(".error-message");
 const listaErros = document.querySelector(".lista_erros");
 // Manipulador de envio do formulário
@@ -18,7 +18,7 @@ form.addEventListener("submit", async (event) => {
         descricao: descricaoInput.value,
         valor: parseFloat(valorInput.value),
         data: dataInput.value,
-        categoria: categoriaInput.value,
+        categoria: categoriaSelect.value,
     };
     console.log("Dados da despesa:", despesaData);
     // Obtém o token do localStorage
