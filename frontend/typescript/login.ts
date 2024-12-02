@@ -3,21 +3,11 @@ import { LOGIN_URL } from "./constantes";
 const loginForm = document.getElementById("login-form") as HTMLFormElement;
 const usernameInput = document.getElementById("username") as HTMLInputElement;
 const passwordInput = document.getElementById("password") as HTMLInputElement;
-const usernameErrors = document.getElementById("username-errors") as HTMLElement;
-const passwordErrors = document.getElementById("password-errors") as HTMLElement;
 const nonFieldErrors = document.getElementById("non-field-errors") as HTMLElement;
 
 // Manipulador de envio do formulário
 loginForm.addEventListener("submit", async (event) => {
     event.preventDefault(); // Evita o envio padrão do formulário
-
-    // Limpa mensagens de erro anteriores
-    usernameErrors.textContent = "";
-    usernameErrors.classList.remove("visible");
-    passwordErrors.textContent = "";
-    passwordErrors.classList.remove("visible");
-    nonFieldErrors.textContent = "";
-    nonFieldErrors.classList.remove("visible");
 
     // Dados do formulário
     const loginData = {

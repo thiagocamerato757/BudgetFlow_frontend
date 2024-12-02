@@ -3,19 +3,10 @@ import { LOGIN_URL } from "./constantes.js";
 const loginForm = document.getElementById("login-form");
 const usernameInput = document.getElementById("username");
 const passwordInput = document.getElementById("password");
-const usernameErrors = document.getElementById("username-errors");
-const passwordErrors = document.getElementById("password-errors");
 const nonFieldErrors = document.getElementById("non-field-errors");
 // Manipulador de envio do formulário
 loginForm.addEventListener("submit", async (event) => {
     event.preventDefault(); // Evita o envio padrão do formulário
-    // Limpa mensagens de erro anteriores
-    usernameErrors.textContent = "";
-    usernameErrors.classList.remove("visible");
-    passwordErrors.textContent = "";
-    passwordErrors.classList.remove("visible");
-    nonFieldErrors.textContent = "";
-    nonFieldErrors.classList.remove("visible");
     // Dados do formulário
     const loginData = {
         username: usernameInput.value,

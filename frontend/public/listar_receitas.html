@@ -15,8 +15,6 @@
                 <a href="listar_despesas.html">Visualizar Despesas</a>
                 <a href="listar_receitas.html">Visualizar Receitas</a>
                 <a href="#">Sair</a>
-                <a href="login.html">Login</a>
-                <a href="cadastro.html">Cadastre-se</a>
             </nav>
         </div>
     </header>
@@ -29,18 +27,8 @@
             <th>Categoria</th>
             <th>Ações</th>
         </tr>
-        <!-- Example static data, replace with actual data -->
-        <tr>
-            <td>Descrição Exemplo</td>
-            <td>100.00</td>
-            <td>2023-10-01</td>
-            <td>Categoria Exemplo</td>
-            <td>
-                <a href="/editar_receita/1"><button>Editar</button></a>
-                <a href="/remover_receita/1" onclick="return confirm('Tem certeza que deseja remover?');"><button>Remover</button></a>
-            </td>
-        </tr>
-        <!-- Repeat for each receita -->
+        <!-- As linhas serão preenchidas dinamicamente pelo JavaScript -->
     </table>
+    <script type="module" src="./javascript/receita.js"></script>
 </body>
 </html>

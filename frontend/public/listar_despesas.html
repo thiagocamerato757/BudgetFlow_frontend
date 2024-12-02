@@ -15,8 +15,7 @@
                 <a href="listar_despesas.html">Visualizar Despesas</a>
                 <a href="listar_receitas.html">Visualizar Receitas</a>
                 <a href="#">Sair</a>
-                <a href="login.html">Login</a>
-                <a href="cadastro.html">Cadastre-se</a>
+
             </nav>
         </div>
     </header>
@@ -29,18 +28,8 @@
             <th>Categoria</th>
             <th>Ações</th>
         </tr>
-        <!-- Example data, replace with actual data -->
-        <tr>
-            <td>Exemplo de Despesa</td>
-            <td>100.00</td>
-            <td>2023-10-01</td>
-            <td>Alimentação</td>
-            <td>
-                <a href="/editar_despesa/1"><button>Editar</button></a>
-                <a href="/remover_despesa/1" onclick="return confirm('Tem certeza que deseja remover?');"><button>Remover</button></a>
-            </td>
-        </tr>
         <!-- Repeat for each despesa -->
-    </table>  
+    </table>
+    <script type="module" src="./javascript/despesas.js"></script>
 </body>
 </html>

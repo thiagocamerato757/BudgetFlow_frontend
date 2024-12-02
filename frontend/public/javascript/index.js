@@ -2,6 +2,8 @@ import { IS_LOGGED_IN_URL, LOGOUT_URL } from "./constantes.js";
 // Selecionar o elemento do menu de navegação no DOM
 const navElement = document.querySelector("header nav");
 const msgBoasVindas = document.getElementById("mensagem");
+const addDespesasLink = document.getElementById("add-despesas-link");
+const addReceitasLink = document.getElementById("add-receitas-link");
 function hideLoginAndSignupLinks() {
     const loginLink = document.querySelector('nav a[href="login.html"]');
     const signupLink = document.querySelector('nav a[href="cadastro.html"]');
@@ -120,6 +122,20 @@ function updatename(name) {
 function genericmessage() {
     msgBoasVindas.textContent = "Bem Vindo ao Budget Flow, Visitante!";
 }
+// Função para verificar se o usuário está autenticado antes de acessar as páginas de cadastro
+function checkAuthenticationBeforeNavigation(event, url) {
+    event.preventDefault();
+    const token = localStorage.getItem("authToken");
+    if (token) {
+        window.location.href = url;
+    }
+    else {
+        window.location.href = "/login.html";
+    }
+}
+// Adicionar eventos aos links de cadastro
+addDespesasLink.addEventListener("click", (event) => checkAuthenticationBeforeNavigation(event, "add_despesas.html"));
+addReceitasLink.addEventListener("click", (event) => checkAuthenticationBeforeNavigation(event, "add_receitas.html"));
 // Executar a verificação ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {
     checkAuthentication();

@@ -19,8 +19,13 @@
         </div>
     </header>
     <div class='container'>
+        <div class="error-message" style="display: none;">
+            <ul class="lista_erros">
+                <!-- Erros serão exibidos aqui -->
+            </ul>
+        </div>
         <h1>Registrar Despesa</h1>
-        <form method="POST" action="/add_despesa">
+        <form id="adicionar_despesas">
             <div class="form-group">
                 <label for="descricao">Descrição:</label>
                 <input type="text" id="descricao" name="descricao">
@@ -40,5 +45,6 @@
             <button type="submit">Adicionar Despesa</button>
         </form>
     </div>
+    <script type="module" src="./javascript/add_despesas.js"></script>
 </body>
 </html>
