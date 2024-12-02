@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  backend:
+    image: thiagocamerato/budgetflow_backend_web:latest
+    container_name: backend
+    ports:
+      - "8000:8000"  # Porta exposta para o backend
+    networks:
+      - budgetflow-network
+
+  frontend:
+    image: thiagocamerato/budgetflow_frontend:latest
+    container_name: frontend
+    ports:
+      - "8080:8080"  # Porta exposta para o frontend
+    depends_on:
+      - backend  # Garante que o backend seja iniciado antes
+    networks:
+      - budgetflow-network
+
+networks:
+  budgetflow-network:
+    driver: bridge
+
