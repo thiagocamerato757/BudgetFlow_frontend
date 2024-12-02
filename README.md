@@ -75,9 +75,9 @@ Este projeto é um site para gerenciar receitas e despesas de forma simples e in
 ---
 
 ## Como usar o site
-Cadastre-se
-cadastre uma despesa ou receita 
-Visualize o cadastro da despesa ou da receita cadastra
-Pode-se editar ou remover um despesa ou receita ja cadastrada
+Cadastre-se.
+cadastre uma despesa ou receita.
+Visualize o cadastro da despesa ou da receita cadastra.
+Pode-se editar ou remover um despesa ou receita ja cadastrada.
 
-Não implementamos edição de senhas
+Não implementamos edição de senhas.
