@@ -81,9 +81,10 @@ Visualize o cadastro da despesa ou da receita cadastra.
 Pode-se editar ou remover um despesa ou receita ja cadastrada.
 Não implementamos edição de senhas.
 
-##Usando as imagens Docker
+---
+## Usando as imagens Docker
+
 Baixe as duas imagens:
-https://hub.docker.com/repository/docker/thiagocamerato/budgetflow_frontend/general
-https://hub.docker.com/repository/docker/thiagocamerato/budgetflow_frontend/general
-depois de baixadas as imagens, pegue o arquivo docker-compose.yml presente no repositorio e rode: 
-sudo docker-compose up --build
+- https://hub.docker.com/repository/docker/thiagocamerato/budgetflow_frontend/general
+- https://hub.docker.com/repository/docker/thiagocamerato/budgetflow_frontend/general
+- depois de baixadas as imagens, pegue o arquivo docker-compose.yml presente no repositorio e rode:  sudo docker-compose up --build
