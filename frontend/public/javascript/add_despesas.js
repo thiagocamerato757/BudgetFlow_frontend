@@ -1,4 +1,4 @@
-import { ADDDESPESAS_URL } from "./constantes";
+import { ADDDESPESAS_URL } from "./constantes.js";
 // Elementos do DOM
 const form = document.getElementById("adicionar_despesas");
 const descricaoInput = document.getElementById("descricao");

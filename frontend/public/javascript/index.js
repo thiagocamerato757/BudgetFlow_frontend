@@ -1,4 +1,4 @@
-import { IS_LOGGED_IN_URL, LOGOUT_URL } from "./constantes";
+import { IS_LOGGED_IN_URL, LOGOUT_URL } from "./constantes.js";
 // Selecionar o elemento do menu de navegação no DOM
 const navElement = document.querySelector("header nav");
 const msgBoasVindas = document.getElementById("mensagem");

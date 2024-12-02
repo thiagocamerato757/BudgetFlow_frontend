@@ -1,4 +1,4 @@
-import { REGISTRA_URL } from "./constantes";
+import { REGISTRA_URL } from "./constantes.js";
 // Elementos do DOM
 const form = document.getElementById("cadastro-form");
 const usernameInput = document.getElementById("username");

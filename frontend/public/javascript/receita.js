@@ -1,4 +1,4 @@
-import { RECEITA_URL, EDITARECEITA_URL } from "./constantes.js";
+import { RECEITA_URL, EDITARECEITA_URL, REMOVERECEITA_URL } from "./constantes.js";
 // Função para buscar receitas da API
 async function fetchReceitas() {
     // Obtém o token do localStorage
