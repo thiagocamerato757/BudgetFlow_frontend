@@ -1,4 +1,4 @@
-import { ADDRECEITA_URL } from "./constantes.js";
+import { ADDRECEITA_URL } from "./constantes";
 // Elementos do DOM
 const form = document.getElementById("adicionar_receita");
 const descricaoInput = document.getElementById("descricao");

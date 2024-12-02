@@ -1,4 +1,4 @@
-import { RECEITA_URL, EDITARECEITA_URL } from "./constantes";
+import { RECEITA_URL, EDITARECEITA_URL, REMOVERECEITA_URL } from "./constantes.js";
 // Função para buscar receitas da API
 async function fetchReceitas() {
     // Obtém o token do localStorage
@@ -68,7 +68,7 @@ async function removeReceita(id) {
     // Obtém o token do localStorage
     const token = localStorage.getItem("authToken");
     try {
-        const response = await fetch(`${RECEITA_URL}/${id}`, {
+        const response = await fetch(`${REMOVERECEITA_URL}${id}/`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

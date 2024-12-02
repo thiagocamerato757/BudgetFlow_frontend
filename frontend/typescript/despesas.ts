@@ -1,4 +1,4 @@
-import { DESPESAS_URL } from "./constantes";
+import { DESPESAS_URL, REMOVEDESPESA_URL } from "./constantes";
 
 // Função para buscar despesas da API
 async function fetchDespesas() {
@@ -13,7 +13,7 @@ async function fetchDespesas() {
                 "Authorization": `Token ${token}`, // Adiciona o token no cabeçalho
             },
         });
-        console.log("Response:", response); // Adiciona o print da response
+
         if (!response.ok) {
             throw new Error("Erro ao buscar despesas");
         }
@@ -84,7 +84,7 @@ async function removeDespesa(id: number) {
     const token = localStorage.getItem("authToken");
 
     try {
-        const response = await fetch(`${DESPESAS_URL}/${id}`, {
+        const response = await fetch(`${REMOVEDESPESA_URL}${id}/`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",

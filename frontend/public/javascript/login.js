@@ -1,4 +1,4 @@
-import { LOGIN_URL } from "./constantes.js";
+import { LOGIN_URL } from "./constantes";
 // Elementos do DOM
 const loginForm = document.getElementById("login-form");
 const usernameInput = document.getElementById("username");
