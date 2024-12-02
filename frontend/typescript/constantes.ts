@@ -9,5 +9,5 @@ export const ADDDESPESAS_URL = `${backendAddress}gastos/Adiciona_despesa/`;
 export const DESPESAS_URL = `${backendAddress}gastos/Lista_despesas/`;
 export const EDITADESPESA_URL = `${backendAddress}gastos/Edita_despesa/`;
 export const EDITARECEITA_URL = `${backendAddress}/gastos/Edita_receita/`;
-export const REMOVEDESPESA_URL = `${backendAddress}gastos/Deleta_despesa/`;
-export const REMOVERECEITA_URL = `${backendAddress}gastos/Deleta_receita/`;
+export const REMOVEDESPESA_URL = `${backendAddress}gastos/Remove_despesa/`;
+export const REMOVERECEITA_URL = `${backendAddress}gastos/Remove_receita/`;

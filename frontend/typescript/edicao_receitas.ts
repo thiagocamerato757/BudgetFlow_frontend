@@ -1,4 +1,4 @@
-import { EDITARECEITA_URL, RECEITA_URL } from "./constantes";
+import { EDITARECEITA_URL} from "./constantes";
 
 // Elementos do DOM
 const form = document.getElementById("editar_receita") as HTMLFormElement;
@@ -18,7 +18,7 @@ async function fetchReceita() {
     const token = localStorage.getItem("authToken");
 
     try {
-        const response = await fetch(`${RECEITA_URL}${receitaId}/`, {
+        const response = await fetch(`${EDITARECEITA_URL}${receitaId}/`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",

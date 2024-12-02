@@ -15,7 +15,7 @@ async function fetchReceita() {
     const token = localStorage.getItem("authToken");
     try {
         const response = await fetch(`${EDITARECEITA_URL}${receitaId}/`, {
-            method: "PUT",
+            method: "GET",
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Token ${token}`,
