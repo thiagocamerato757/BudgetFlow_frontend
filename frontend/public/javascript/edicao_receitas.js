@@ -5,8 +5,6 @@ const descricaoInput = document.getElementById("descricao");
 const valorInput = document.getElementById("valor");
 const dataInput = document.getElementById("data");
 const categoriaInput = document.getElementById("categoria");
-const errorMessage = document.querySelector(".error-message");
-const listaErros = document.querySelector(".lista_erros");
 // Obtém o ID da receita da URL
 const urlParams = new URLSearchParams(window.location.search);
 const receitaId = urlParams.get("id");
@@ -41,9 +39,6 @@ function preencherFormulario(receita) {
 // Manipulador de envio do formulário
 form.addEventListener("submit", async (event) => {
     event.preventDefault(); // Evita o envio padrão do formulário
-    // Limpa mensagens de erro anteriores
-    listaErros.innerHTML = "";
-    errorMessage.style.display = "none";
     // Dados do formulário
     const receitaData = {
         descricao: descricaoInput.value,
@@ -70,6 +65,7 @@ form.addEventListener("submit", async (event) => {
         if (!response.ok) {
             const errorData = await response.json();
             console.log("Response:", response);
+            alert("Erro ao editar receita. Verifique os dados e tente novamente.");
             throw new Error(errorData.message || "Erro ao editar receita");
         }
         // Receita editada com sucesso
@@ -78,8 +74,7 @@ form.addEventListener("submit", async (event) => {
     }
     catch (error) {
         console.error("Erro ao editar receita:", error);
-        listaErros.innerHTML = `<li>${error.message}</li>`;
-        errorMessage.style.display = "block";
+        alert("Erro ao editar receita. Verifique os dados e tente novamente.");
     }
 });
 // Executar a busca dos dados da receita ao carregar a página

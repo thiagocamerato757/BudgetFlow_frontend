@@ -6,8 +6,6 @@ const descricaoInput = document.getElementById("descricao") as HTMLInputElement;
 const valorInput = document.getElementById("valor") as HTMLInputElement;
 const dataInput = document.getElementById("data") as HTMLInputElement;
 const categoriaInput = document.getElementById("categoria") as HTMLInputElement;
-const errorMessage = document.querySelector(".error-message") as HTMLElement;
-const listaErros = document.querySelector(".lista_erros") as HTMLElement;
 
 // Obtém o ID da receita da URL
 const urlParams = new URLSearchParams(window.location.search);
@@ -49,10 +47,6 @@ function preencherFormulario(receita: any) {
 form.addEventListener("submit", async (event) => {
     event.preventDefault(); // Evita o envio padrão do formulário
 
-    // Limpa mensagens de erro anteriores
-    listaErros.innerHTML = "";
-    errorMessage.style.display = "none";
-
     // Dados do formulário
     const receitaData = {
         descricao: descricaoInput.value,
@@ -83,6 +77,7 @@ form.addEventListener("submit", async (event) => {
         if (!response.ok) {
             const errorData = await response.json();
             console.log("Response:", response);
+            alert("Erro ao editar receita. Verifique os dados e tente novamente.");
             throw new Error(errorData.message || "Erro ao editar receita");
         }
 
@@ -91,8 +86,7 @@ form.addEventListener("submit", async (event) => {
         window.location.href = "/listar_receitas.html"; // Redireciona para a página de listagem de receitas
     } catch (error: any) {
         console.error("Erro ao editar receita:", error);
-        listaErros.innerHTML = `<li>${error.message}</li>`;
-        errorMessage.style.display = "block";
+        alert("Erro ao editar receita. Verifique os dados e tente novamente.");
     }
 });
 

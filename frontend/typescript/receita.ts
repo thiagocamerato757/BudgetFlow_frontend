@@ -1,4 +1,4 @@
-import { RECEITA_URL, EDITARECEITA_URL, REMOVERECEITA_URL } from "./constantes";
+import { RECEITA_URL, REMOVERECEITA_URL } from "./constantes";
 
 // Função para buscar receitas da API
 async function fetchReceitas() {
@@ -58,7 +58,9 @@ function displayReceitas(receitas: any[]) {
         const editarButton = document.createElement("button");
         editarButton.textContent = "Editar";
         editarButton.onclick = () => {
-            window.location.href = `${EDITARECEITA_URL}${receita.id}/`;
+            window.location.href = `editar_receitas.html?id=${receita.id}`;
+
+    
         };
         acoesCell.appendChild(editarButton);
 
